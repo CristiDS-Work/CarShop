@@ -1,0 +1,47 @@
+﻿<Window x:Class="CarShop.CarsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CarShop"
+        mc:Ignorable="d"
+        Title="Car Shop: Cars" Height="500" Width="1000"
+        Icon="/Images/Icons/app_icon.png">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/background-image.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <DockPanel Background="#AA000000">
+            <StackPanel VerticalAlignment="Center" Margin="30,0,0,0">
+                <Label HorizontalAlignment="Center" Foreground="White" FontSize="15px" FontWeight="Bold">Add car</Label>
+                <Label Foreground="White" HorizontalAlignment="Center">Brand:</Label>
+                <TextBox x:Name="Brand_Input" Width="150px" TextAlignment="Center" FontSize="15px" Padding="0,5,0,5"></TextBox>
+                <Label Foreground="White" HorizontalAlignment="Center">Model:</Label>
+                <TextBox x:Name="Model_Input" Width="150px" TextAlignment="Center" FontSize="15px" Padding="0,5,0,5"></TextBox>
+                <Label Foreground="White" HorizontalAlignment="Center">ProductionYear:</Label>
+                <TextBox x:Name="Year_Input" Width="150px" TextAlignment="Center" FontSize="15px" Padding="0,5,0,5"></TextBox>
+                <Label Foreground="White" HorizontalAlignment="Center">Price:</Label>
+                <TextBox x:Name="Price_Input" Width="150px" TextAlignment="Center" FontSize="15px" Padding="0,5,0,5"></TextBox>
+                <Button Height="35px" Margin="0,30,0,0" Cursor="Arrow" Click="AddCar_onClick">ADD CAR</Button>
+                <Label HorizontalAlignment="Center" Foreground="Red" x:Name="AddCar_Success" Visibility="Hidden">Car added!</Label>
+            </StackPanel>
+            <StackPanel VerticalAlignment="Center" Margin="30,0,0,0">
+                <Label HorizontalAlignment="Center" Foreground="White" FontSize="15px" FontWeight="Bold" x:Name="EditCar_Title">Edit car (ID: 5)</Label>
+                <Label Foreground="White" HorizontalAlignment="Center">Brand:</Label>
+                <TextBox x:Name="Brand_Edit" Width="150px" TextAlignment="Center" FontSize="15px" Padding="0,5,0,5"></TextBox>
+                <Label Foreground="White" HorizontalAlignment="Center">Model:</Label>
+                <TextBox x:Name="Model_Edit" Width="150px" TextAlignment="Center" FontSize="15px" Padding="0,5,0,5"></TextBox>
+                <Label Foreground="White" HorizontalAlignment="Center">ProductionYear:</Label>
+                <TextBox x:Name="Year_Edit" Width="150px" TextAlignment="Center" FontSize="15px" Padding="0,5,0,5"></TextBox>
+                <Label Foreground="White" HorizontalAlignment="Center">Price:</Label>
+                <TextBox x:Name="Price_Edit" Width="150px" TextAlignment="Center" FontSize="15px" Padding="0,5,0,5"></TextBox>
+                <Button Height="35px" Margin="0,30,0,0" Cursor="Arrow" Click="EditCar_onClick">EDIT CAR</Button>
+                <Label HorizontalAlignment="Center" Foreground="Red" x:Name="EditCar_Success" Visibility="Hidden">Car editted</Label>
+            </StackPanel>
+
+            <Grid x:Name="MainGrid" HorizontalAlignment="Right">
+
+            </Grid>
+        </DockPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,47 @@
+﻿<Window x:Class="CarShop.ClientsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CarShop"
+        mc:Ignorable="d"
+        Title="Car Shop: Clients" Height="500" Width="1000"
+        Icon="/Images/Icons/app_icon.png">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/background-image.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <DockPanel Background="#AA000000">
+            <StackPanel VerticalAlignment="Center" Margin="30,0,0,0">
+                <Label HorizontalAlignment="Center" Foreground="White" FontSize="15px" FontWeight="Bold">Add client</Label>
+                <Label Foreground="White" HorizontalAlignment="Center" x:Name="FirstName_Label">FirstName:</Label>
+                <TextBox x:Name="FirstName_Input" Width="150px" TextAlignment="Center" FontSize="15px" Padding="0,5,0,5"></TextBox>
+                <Label Foreground="White" HorizontalAlignment="Center">LastName:</Label>
+                <TextBox x:Name="LastName_Input" Width="150px" TextAlignment="Center" FontSize="15px" Padding="0,5,0,5"></TextBox>
+                <Label Foreground="White" HorizontalAlignment="Center">Email:</Label>
+                <TextBox x:Name="Email_Input" Width="150px" TextAlignment="Center" FontSize="15px" Padding="0,5,0,5"></TextBox>
+                <Label Foreground="White" HorizontalAlignment="Center">PhoneNumber:</Label>
+                <TextBox x:Name="PhoneNumber_Input" Width="150px" TextAlignment="Center" FontSize="15px" Padding="0,5,0,5"></TextBox>
+                <Button Height="35px" Margin="0,30,0,0" Cursor="Arrow" Click="AddClient_onClick">ADD CLIENT</Button>
+                <Label HorizontalAlignment="Center" Foreground="Red" x:Name="AddClient_Success" Visibility="Hidden">Client added!</Label>
+            </StackPanel>
+            <StackPanel VerticalAlignment="Center" Margin="30,0,0,0">
+                <Label HorizontalAlignment="Center" Foreground="White" FontSize="15px" FontWeight="Bold" x:Name="EditClient_Title">Edit client (ID: 5)</Label>
+                <Label Foreground="White" HorizontalAlignment="Center">FirstName:</Label>
+                <TextBox x:Name="FirstName_Edit" Width="150px" TextAlignment="Center" FontSize="15px" Padding="0,5,0,5"></TextBox>
+                <Label Foreground="White" HorizontalAlignment="Center">LastName:</Label>
+                <TextBox x:Name="LastName_Edit" Width="150px" TextAlignment="Center" FontSize="15px" Padding="0,5,0,5"></TextBox>
+                <Label Foreground="White" HorizontalAlignment="Center">Email:</Label>
+                <TextBox x:Name="Email_Edit" Width="150px" TextAlignment="Center" FontSize="15px" Padding="0,5,0,5"></TextBox>
+                <Label Foreground="White" HorizontalAlignment="Center">PhoneNumber:</Label>
+                <TextBox x:Name="PhoneNumber_Edit" Width="150px" TextAlignment="Center" FontSize="15px" Padding="0,5,0,5"></TextBox>
+                <Button Height="35px" Margin="0,30,0,0" Cursor="Arrow" Click="EditClient_onClick">EDIT CLIENT</Button>
+                <Label HorizontalAlignment="Center" Foreground="Red" x:Name="EditClient_Success" Visibility="Hidden">Client editted</Label>
+            </StackPanel>
+            
+            <Grid x:Name="MainGrid" HorizontalAlignment="Right">
+                
+            </Grid>
+        </DockPanel>
+    </Grid>
+</Window>
